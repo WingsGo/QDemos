@@ -1,3 +1,7 @@
+#Customer Ignore
+*.pro.user
+bin\*
+
 # Prerequisites
 *.d
 
