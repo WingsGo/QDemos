@@ -1,6 +1,7 @@
 #Customer Ignore
 *.pro.user*
-bin\*
+bin/debug/*
+bin/release/*
 
 # Prerequisites
 *.d
