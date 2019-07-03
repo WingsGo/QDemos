@@ -6,8 +6,12 @@
 #include <QTimerEvent>
 #include <QPainter>
 #include <QDebug>
+#include <QtDesigner/QDesignerExportWidget>
 
-class VScrollLabel : public QLabel
+/**************** 自定义插件使用注意事项 ********************************
+ **************** https://www.cnblogs.com/georgeOfChina/p/7773141.html*/
+
+class QDESIGNER_WIDGET_EXPORT VScrollLabel : public QLabel
 {
     Q_OBJECT
 public:
