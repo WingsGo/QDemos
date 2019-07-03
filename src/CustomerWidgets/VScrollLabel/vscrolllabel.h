@@ -15,14 +15,18 @@ class QDESIGNER_WIDGET_EXPORT VScrollLabel : public QLabel
 {
     Q_OBJECT
 public:
+    enum ScrollDirection{
+        FROMLEFTTORIGHT,
+        FROMRIGHTTOLEFT,
+    };
+
     explicit VScrollLabel(QWidget *parent = 0);
     virtual ~VScrollLabel();
 
     void setScrollSpeed(int speed);
+    void setScrollDirection(ScrollDirection direction);
 
-protected:
-
-public Q_SLOTS:
+public slots:
     void setText(const QString &curText);
 
 protected:
@@ -33,12 +37,14 @@ protected:
     void updateRollingState();
 
 private:
+    int m_iFontSize;    // font-size不能与Qt默认font-size=9相同
     int m_iScrollPixel;
     int m_iScrollSpeed;
     int m_iTopMargin;
     int m_iLeftMargin;
     int m_iTimerId;
-    const QString m_cTextMargin;
+    const QString m_cMarginText;
+    ScrollDirection m_eDirection;
 };
 
 #endif // VSCROLLLABEL_H

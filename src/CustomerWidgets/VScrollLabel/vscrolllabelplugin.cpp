@@ -1,4 +1,4 @@
-﻿#include "vscrolllabel.h"
+#include "vscrolllabel.h"
 #include "vscrolllabelplugin.h"
 
 #include <QtPlugin>
@@ -51,7 +51,7 @@ QString VScrollLabelPlugin::toolTip() const
 
 QString VScrollLabelPlugin::whatsThis() const
 {
-    return QLatin1String("This is a subclass from QLabel which can scroll to display when text is too long to show");
+    return QLatin1String("");
 }
 
 bool VScrollLabelPlugin::isContainer() const
