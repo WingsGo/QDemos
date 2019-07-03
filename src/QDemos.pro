@@ -2,4 +2,6 @@ TEMPLATE = subdirs
 
 SUBDIRS += \
     PageTurning \
-    DbPage
+    DbPage \
+    ModelView \
+    CustomerWidgets
